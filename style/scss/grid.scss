@@ -1,0 +1,65 @@
+// SCSS version of the LESS-based Semantic Grid System at semantic.gs
+
+// Defaults which you can freely override
+$column-width: 60;
+$gutter-width: 20;
+$columns: 12;
+$gridsystem-width: ($column-width*$columns) + ($gutter-width*$columns);
+
+// Set $grid-type to 1% for a fluid layout
+$grid-type: 1px;
+
+body {
+	width: 90%;
+	float: left;
+	margin: 0 auto;
+	font-size: 1.3em;
+	max-width: 950px;           /* add max-width to the body */
+}
+
+.span-1, .span-2, .span-3 {
+	min-height: 150px;
+	float: left;
+	margin-right: 3.33333%;     /* 10 / 300 = .0333 */
+	margin-bottom: 10px;
+}
+
+.span-1 {
+	width: 30%;                 /* 90 / 300 = .3 */
+	background-color: red;
+}
+
+.span-2 {
+	width: 63.33333%;           /* 190 / 300 = .6333 */
+	background-color: blue;
+}
+
+.span-3 {
+	width: 96.66666%;           /* 290 / 300 = .9666 */
+	background-color: lightgreen;
+}
+
+@mixin row($columns:$columns) {
+	display: inline-block;
+	overflow: hidden;
+	@if $grid-type == 1% {
+	  width: (($gutter-width + $gridsystem-width) / $gridsystem-width) * 100%;
+	  margin: 0 ((($gutter-width*.5) / $gridsystem-width) * -1) * 100%;
+	} @else {
+	  width: ($gutter-width + $gridsystem-width);
+	  margin: 0 (($gutter-width*.5)*-1px);
+	}
+}
+
+@mixin column($x,$columns:$columns) {
+	display: inline;
+	float: left;
+	overflow: hidden;
+	@if $grid-type == 1% {
+	  width: (((($gutter-width + $column-width)*$x) - $gutter-width) / $gridsystem-width) * 100%;
+	  margin: 0 (($gutter-width*.5) / $gridsystem-width) * 100%;
+	} @else {
+	  width: ((($gutter-width + $column-width)*$x) - $gutter-width) * 1px;
+	  margin: 0 ($gutter-width*.5) * 1px;
+	}
+}

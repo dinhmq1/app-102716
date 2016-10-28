@@ -392,5 +392,64 @@ td {
 
   h2, h3 {
     page-break-after: avoid; } }
+body {
+  width: 90%;
+  float: left;
+  margin: 0 auto;
+  font-size: 1.3em;
+  max-width: 950px;
+  /* add max-width to the body */ }
+
+.span-1, .span-2, .span-3 {
+  min-height: 150px;
+  float: left;
+  margin-right: 3.33333%;
+  /* 10 / 300 = .0333 */
+  margin-bottom: 10px; }
+
+.span-1 {
+  width: 30%;
+  /* 90 / 300 = .3 */
+  background-color: red; }
+
+.span-2 {
+  width: 63.33333%;
+  /* 190 / 300 = .6333 */
+  background-color: blue; }
+
+.span-3 {
+  width: 96.66666%;
+  /* 290 / 300 = .9666 */
+  background-color: lightgreen; }
+
+body {
+  width: 90%;
+  float: left;
+  margin: 0 auto;
+  font-size: 1.3em;
+  max-width: 950px;
+  /* add max-width to the body */ }
+
+.span-1, .span-2, .span-3 {
+  min-height: 150px;
+  float: left;
+  margin-right: 3.33333%;
+  /* 10 / 300 = .0333 */
+  margin-bottom: 10px; }
+
+.span-1 {
+  width: 30%;
+  /* 90 / 300 = .3 */
+  background-color: red; }
+
+.span-2 {
+  width: 63.33333%;
+  /* 190 / 300 = .6333 */
+  background-color: blue; }
+
+.span-3 {
+  width: 96.66666%;
+  /* 290 / 300 = .9666 */
+  background-color: lightgreen; }
 
 /*# sourceMappingURL=base.css.map */
