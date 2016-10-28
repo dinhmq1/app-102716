@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Foot Toes App</title>
+    <!-- viewport to enable responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- <link rel="icon" href="favicon.jpg"> -->
+
+    <link rel="stylesheet" type="text/css" href="style/css/base.css" />
+    <!-- media query styles (mq.css) -->
+    <link rel="stylesheet" type="text/css" media="not print, braille, embossed, speech,screen, tty" href="style/css/mq.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jq-main.js"></script>
+
+    <!-- If using IE 8 or older, build no media query(nomq) style-->
+    <!--[if (lte IE 8)&(!IEMobile)]>
+      <link rel="stylesheet" media="screen" href="styles/nomq.css">
+      <![endif]-->
+
+  </head>
+  <!-- 'ng-strict-di' forces the app to use dependency inj. safe syntax -->
+  <body>
+
+
+    <!-- <button id="btnGetNum" onclick="getMyNum()">Start</button> -->
+
+
+
+
+    <form id="myForm">
+      <input type="number" id="initalNumVal">
+      <input type="button" onclick="restartFn()" value="Restart" id="btnRestart">
+      <input type="button" onclick="resetFn()" value="Reset">
+    </form>
+
+    <h1 id="loadingGif">Calculating....</h1>
+    <p id="title1"></p><br>
+    <p id="demo"></p>
+
+  <script type="text/javascript" src="js/main.js"></script>
+
+  </body>
+</html>
