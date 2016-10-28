@@ -10,11 +10,9 @@ $gridsystem-width: ($column-width*$columns) + ($gutter-width*$columns);
 $grid-type: 1px;
 
 body {
-	width: 90%;
-	float: left;
+	width: 90%;                 /* initial width */
 	margin: 0 auto;
 	font-size: 1.3em;
-	max-width: 950px;           /* add max-width to the body */
 }
 
 .span-1, .span-2, .span-3 {
@@ -26,12 +24,12 @@ body {
 
 .span-1 {
 	width: 30%;                 /* 90 / 300 = .3 */
-	background-color: red;
+	background-color: white;
 }
 
 .span-2 {
 	width: 63.33333%;           /* 190 / 300 = .6333 */
-	background-color: blue;
+	background-color: white;
 }
 
 .span-3 {

@@ -11,13 +11,11 @@
     <!-- <link rel="icon" href="favicon.jpg"> -->
 
     <link rel="stylesheet" type="text/css" href="style/css/base.css" />
-    
+
     <!-- If using IE 8 or older, build no media query(nomq) style-->
     <!--[if (lte IE 8)&(!IEMobile)]>
       <link rel="stylesheet" media="screen" href="styles/css/ie.css">
       <![endif]-->
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-      <script type="text/javascript" src="js/jq-main.js"></script>
   </head>
   <!-- 'ng-strict-di' forces the app to use dependency inj. safe syntax -->
   <body>
@@ -25,20 +23,25 @@
 
     <!-- <button id="btnGetNum" onclick="getMyNum()">Start</button> -->
 
+    <div class="span-3">
+      <h1>Fingers Toes</h1>
+      <form id="myForm">
+        <input type="number" id="initalNumVal">
+        <input type="button" onclick="getCount()" value="Restart" id="btnRestart">
+        <input type="button" onclick="resetFn()" value="Reset">
+      </form>
+    </div>
 
+    <div class="span-2" id="displayCount">
+      <p id="title1"></p>
+    </div>
 
+    <div class="span-1">
+    </div>
 
-    <form id="myForm">
-      <input type="number" id="initalNumVal">
-      <input type="button" onclick="restartFn()" value="Restart" id="btnRestart">
-      <input type="button" onclick="resetFn()" value="Reset">
-    </form>
-
-    <h1 id="loadingGif">Calculating....</h1>
-    <p id="title1"></p><br>
-    <p id="demo"></p>
-
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+
 
   </body>
 </html>
