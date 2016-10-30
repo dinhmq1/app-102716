@@ -1,9 +1,10 @@
-var n, output, len, index, x, inputVal;
-function getCount(inputVal) {
+var n, output, len, index, x, inputVal, outputPara;
+function getCount() {
       for (n = 0, len = document.getElementById("initalNumVal").value; n <= len; n++) {
         (function(index) {
           setTimeout(function() {
           output = "";
+          outputPara = document.getElementById("paraOutputVal");
           if (index % 3 == 0)
             output += "Fizz";
           if (index % 5 == 0)
@@ -11,12 +12,12 @@ function getCount(inputVal) {
 
           x = output || index;
           inputVal = x;
-          document.getElementById("title1").innerHTML += x + '<br>';
+          outputPara.innerHTML += x + '<br>';
       ;},n * 1000);
     })(n);
   }
 }
 
-function getOutput() {
-  console.log();
-};
+function clearAlert() {
+  clearTimeout(getCount, 0);
+}
