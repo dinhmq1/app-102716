@@ -24,17 +24,17 @@ function getCount() {
             if (index % 3 == 0)
               output += "Fizz";
             if(output === "Fizz")
-              outputParaFingers.innerHTML += "Fizz: " + index + strDivBy3 + index/3 + '<br>';
+              outputParaFingers.innerHTML += '<li>' + "Fizz: " + index + strDivBy3 + index/3 + '</li>';
 
             if (index % 5 == 0)
               output += "Buzz";
             if(output === "Buzz")
-              outputParaToes.innerHTML += "Buzz: " + index + strDivBy5 + index/5 + '<br>';
+              outputParaToes.innerHTML += '<li>' + "Buzz: " + index + strDivBy5 + index/5 + '</li>';
 
             x = output || index;
-            outputParaX.innerHTML += x + ', ';
+            outputParaX.innerHTML += '<li>' + x + '</li>';
             //console.log(inputVal);
-          ;}, i * 1000)
+          ;}, i * 10)
        })(i);
     }
     return;

@@ -16,13 +16,7 @@ $(document).ready(function(){
       }
 
       if (inputValue > 0 && inputValue != null) {
-        //$('#mainHeader').fadeIn(300);
-        $('#paraLoad').show();
-        $('#paraLoad').text("Calculating...");
-
         $('#btnSubmit').attr("disabled", true);
-        $('#paraLoad').fadeOut(1000);
-        //$('#mainHeader').show(1500);
       }
       return inputValue;
     });
