@@ -38,7 +38,7 @@ function getCount() {
             outputParaX.innerHTML += x + ', ';
 
             //console.log(inputVal);
-          ;}, i * 100)
+          ;}, i * 1000)
        })(i);
     }
 }
