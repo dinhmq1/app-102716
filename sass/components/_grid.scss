@@ -20,28 +20,28 @@ body {
 .span-1, .span-2, .span-3 {
 	min-height: 150px;
 	float: left;
-	margin-right: 1%;     /* 10 / 300 = .0333 */
+	margin-right: 0.33333%;     /* 10 / 900 = .01111 */
 	margin-bottom: 10px;
 	display: inline-block;
-	padding: 10px 5px 10px 0px;
+	padding: 10px 5px 10px 5px;
 }
 
 .span-1 {
-	width: 30.66666%;                 /* 90 / 300 = .3 */
+	width: 47.77777%;                 /* 90 / 900 = .3 */
 	background-color: rgb(230, 199, 181);
 	text-align: left;
-	padding-left:5px;
+	//padding-left:5px;
 }
 
 .span-2 {
-	width: 30.66666%;           /* 190 / 300 = .6333 */
+	width: 97%;           /* 190 / 900 = .6333 */
 	text-align: left;
-	padding-left:5px;
-	background-color: rgb(230, 199, 181);
+	//padding-left:5px;
+	background-color: rgb(114, 203, 231);
 }
 
 .span-3 {
-	width: 96.66666%;           /* 290 / 300 = .9666 */
+	width: 97%;           /* 890 / 900 = .98888 */
 	background-color: lightgreen;
 	text-align: center;
 }

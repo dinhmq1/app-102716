@@ -2,19 +2,28 @@ $(document).ready(function(){
   $('#paraLoad').hide();
     $('#btnSubmit').click(function(){
       var inputValue = $('#initalNumVal').val();
-      if (inputValue > 0) {
+
+      if (inputValue.length == 0) {
+        $('#btnSubmit').attr("disabled", false);
+        alert('Input field is empty!');
+        return;
+      }
+
+      if (inputValue <= 0) {
+        $('#btnSubmit').attr("disabled", false);
+        alert('Must be greater than 0!');
+        return;
+      }
+
+      if (inputValue > 0 && inputValue != null) {
         //$('#mainHeader').fadeIn(300);
+        $('#paraLoad').show();
         $('#paraLoad').text("Calculating...");
-        $('#paraLoad').fadeIn(1400);
 
         $('#btnSubmit').attr("disabled", true);
-        $('#paraLoad').fadeOut(700);
+        $('#paraLoad').fadeOut(1000);
         //$('#mainHeader').show(1500);
-
-      };
-      if (inputValue <= 0 || inputValue == null) {
-        $('#btnSubmit').attr("disabled", false);
-        alert('Must be a positive integer!');
-      };
+      }
+      return inputValue;
     });
 });
