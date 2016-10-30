@@ -1,14 +1,14 @@
 $(document).ready(function(){
-  var inputValue = $('#initalNumVal').val();
     $('#btnSubmit').click(function(){
-      if (inputValue <= 0 || inputValue == null) {
-        alert('Must be a positive integer!');
-        return;
-      };
-      if (inputValue > 0 || inputValue != null) {
+      var inputValue = $('#initalNumVal').val();
+      if (inputValue > 0) {
         $('#paraLoad').text("Calculating.....");
         $('#btnSubmit').attr("disabled", true);
         $('#paraLoad').fadeOut(900);
+      };
+      if (inputValue <= 0 || inputValue == null) {
+        $('#btnSubmit').attr("disabled", false);
+        alert('Must be a positive integer!');
       };
     });
 });

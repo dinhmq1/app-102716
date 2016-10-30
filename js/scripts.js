@@ -8,7 +8,6 @@ var outputParaLoading = document.getElementById("paraLoading");
 var divCountFingers = document.getElementById("divCountFingers");
 var divCountMain = document.getElementById("divCountMain");
 var divCountToes = document.getElementById("divCountToes");
-var formInputNumBox = document.getElementById("inputNumBox");
 
 function getCount() {
       inputValueLength = document.getElementById("initalNumVal").value;
